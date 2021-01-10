@@ -40,6 +40,10 @@ class App extends Component {
         contacts: prevState.contacts.filter(({ id }) => id !== contactId),
       };
     });
+
+    this.setState({
+      filter: '',
+    });
   };
 
   changeFilter = filter => {
@@ -55,7 +59,7 @@ class App extends Component {
   };
 
   render() {
-    const { filter } = this.state;
+    const { filter, contacts } = this.state;
     const visibleContacts = this.getVisibleContacts();
 
     return (
@@ -64,7 +68,7 @@ class App extends Component {
         <ContactForm onAddContact={this.addContact} />
 
         <h2>Contacts</h2>
-        {visibleContacts.length > 1 && (
+        {contacts.length > 1 && (
           <Filter value={filter} onChangeFilter={this.changeFilter} />
         )}
         <ContactList
