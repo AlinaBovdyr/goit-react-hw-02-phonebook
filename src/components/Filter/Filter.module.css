@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #3968a5;
+}
+
+.input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid #a6bcd8c9;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #3b8bff87;
+}

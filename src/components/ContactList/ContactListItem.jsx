@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import s from './ContactList.module.css';
 
 function ContactListItem({ name, number, onDelete }) {
   return (
-    <li>
-      {name}: {number}
-      <button type="button" onClick={onDelete}>
+    <li className={s.contactItem}>
+      <span>
+        {name}: {number}
+      </span>
+      <button className={s.button} type="button" onClick={onDelete}>
         Delete
       </button>
     </li>
